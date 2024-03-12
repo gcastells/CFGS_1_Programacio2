@@ -14,24 +14,45 @@ public class AppEAC4 {
     }
 
     private void start() {
+        askForString("Hola, introdueix el teu nom", "Ets tonto, no has posat cap nom");
+
     }
 
     public static String askForString(String message, String errorMessage){
+        return "";
     }
 
     public static float askForFloat(String message, String errorMessage) {
+        return 0;
     }
 
     public static int askForInteger(String message, String errorMessage) {
+        return 0;
     }
 
     public static int getAspirantByDocument(String aspirantDocument, String[][] aspirants) {
+
+        if (aspirantDocument == null || aspirants == null){
+            return -2;
+        }
+
+        for (int i = 0; i < aspirants.length; i++) {
+            if (aspirants[i].length<3){
+                return -2;
+            }
+            if (aspirantDocument.equals(aspirants[i][2])){
+                return 2;
+            }
+        }
+        return -1;
     }
 
     public static float getGrade(int aspirantId, int testId, float[][] grades) {
+        return 0;
     }
 
     public static int setGradeTestAspirant(int aspirantId, int testId, float grade, float[][] grades) {
+        return 0;
     }
 
 }
